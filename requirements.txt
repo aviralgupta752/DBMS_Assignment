@@ -1,0 +1,3 @@
+python_docx==0.8.10
+docx==0.2.4
+mysql_connector_repackaged==0.3.1

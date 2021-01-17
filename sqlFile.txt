@@ -1,0 +1,110 @@
+1. ITEM_TABLE
+CREATE TABLE Item_Table (item_id VARCHAR(30) NOT NULL, item_name VARCHAR(30) NOT NULL, Manu_name VARCHAR(30) NOT NULL, item_rate FLOAT(2) NOT NULL, Sell_prize FLOAT(2) NOT NULL, item_discription VARCHAR(30) NOT NULL);
+INSERT INTO Item_Table VALUES ('i001', 'lux_soap', 'lux_company', '15.67', '20.43', 'soap');
+INSERT INTO Item_Table VALUES ('i002', 'copy', 'royal_notebook', '14.80', '16.40', 'copy');
+INSERT INTO Item_Table VALUES ('i003', 'goodday_biscuit', 'britania_stores', '2218.80', '2220.40', 'biscuit');
+INSERT INTO Item_Table VALUES ('i004', 'reynolds_pen', 'pen_parker', '2015.67', '2120.43', 'pen');
+INSERT INTO Item_Table VALUES ('i005', 'sql_books', 'book_bpb', '5104.80', '5116.40', 'book');
+INSERT INTO Item_Table VALUES ('i006', 'tata_steel', 'tata_sons', '5118.80', '5120.40', 'tata');
+INSERT INTO Item_Table VALUES ('i007', 'seagatehdd', 'hp_world', '5104.80', '5116.40', 'HDD1034');
+INSERT INTO Item_Table VALUES ('i008', 'dvdwriter', 'moserbear_org', '5118.80', '5120.40', 'DVDRW');
+Table 1 complete.
+
+2. CUSTOMER_TABLE
+CREATE TABLE Customer_Table (Cust_id VARCHAR(30) NOT NULL, Cust_name VARCHAR(30) NOT NULL, Address VARCHAR(30) NOT NULL, City VARCHAR(30) NOT NULL, Pin INT NOT NULL, State VARCHAR(30) NOT NULL, Bal_due FLOAT(2) NOT NULL);
+INSERT INTO Customer_Table VALUES ('cu01001', 'alakroy', 'b.d.para', 'Patna', '800015', 'Bihar', '0');
+INSERT INTO Customer_Table VALUES ('cu01002', 'sumanroy', 'pukpara', 'patna', '800132', 'Bihar', '2390.9');
+INSERT INTO Customer_Table VALUES ('cu01004', 'priyadas', 'chorapara', 'Gaya', '800010', 'Bihar', '1390.9');
+INSERT INTO Customer_Table VALUES ('cu01005', 'rinaraj', 'kamalpara', 'patna', '800001', 'Bihar', '0');
+INSERT INTO Customer_Table VALUES ('cu01006', 'pulakroy', 'bircity', 'lucknow', '226012', 'uttarpradesh', '110.9');
+INSERT INTO Customer_Table VALUES ('cu01007', 'priyankadas', 'nappam', 'lucknow', '226005', 'uttarpradesh', '190.9');
+INSERT INTO Customer_Table VALUES ('cu01008', 'kusumroy', 'Jhalwa', 'allahabad', '211012', 'uttarpradesh', '110.9');
+INSERT INTO Customer_Table VALUES ('cu01009', 'minadas', 'naini', 'allahabad', '211078', 'uttarpradesh', '0');
+INSERT INTO Customer_Table VALUES ('cu01003', 'nidhimishra', 'naini', 'allahabad', '212079', 'uttarpradesh', '9990.9');
+INSERT INTO Customer_Table VALUES ('cu01010', 'kamalyadav', 'naini', 'allahabad', '211037', 'uttarpradesh', '2990.9');
+Table 2 complete.
+
+3. SALESMAN_TABLE
+CREATE TABLE Salesman_Table (Salesman_id VARCHAR(30) NOT NULL, Salesman_name VARCHAR(30) NOT NULL, Address VARCHAR(30) NOT NULL, City VARCHAR(30) NOT NULL, Pin INT NOT NULL, State VARCHAR(30) NOT NULL, Salary INT NOT NULL);
+INSERT INTO Salesman_Table VALUES ('s001', 'rohansingh', 'rajapur', 'allhabad', '212098', 'uttarpradesh', '8000');
+INSERT INTO Salesman_Table VALUES ('s002', 'rohansingh', 'naini', 'allhabad', '212096', 'uttarpradesh', '9800');
+INSERT INTO Salesman_Table VALUES ('s003', 'smitaroy', 'indiranagar', 'lucknow', '226078', 'uttarpradesh', '3400');
+INSERT INTO Salesman_Table VALUES ('s004', 'kabirbora', 'vikasnagar', 'lucknow', '226045', 'uttarpradesh', '6700');
+INSERT INTO Salesman_Table VALUES ('s005', 'nehasingh', 'gomtinagar', 'lucknow', '226032', 'uttarpradesh', '9600');
+INSERT INTO Salesman_Table VALUES ('s006', 'priyaagarwal', 'gandhiroad', '32distric', '799750', 'delhi', '9900');
+INSERT INTO Salesman_Table VALUES ('s007', 'ashokpaul', 'filmcity', 'munnabari', '799740', 'mumbai', '8900');
+Table 3 complete.
+
+4. SALES_ORDER_TABLE
+CREATE TABLE Sales_Order_Table (Sales_order_no VARCHAR(30) NOT NULL, Sales_order_date VARCHAR(30) NOT NULL, cust_id VARCHAR(30) NOT NULL, Salesman_id VARCHAR(30) NOT NULL, Bill_payby_party VARCHAR(30) NOT NULL, Delivery_date VARCHAR(30) NOT NULL, item_rate FLOAT(2) NOT NULL, Tot_quantity_order VARCHAR(30) NOT NULL, Cancel_date VARCHAR(30) NOT NULL);
+INSERT INTO Sales_Order_Table VALUES ('son01001', '01-aug-2008', 'cu01001', 's001', 'yes', '20-aug-2008', '2220.40', '50', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01002', '12-aug-2008', 'cu01004', 's001', 'yes', '23-aug-2008', '2220.40', '15', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01003', '12-aug-2008', 'cu01005', 's002', 'yes', '26-aug-2008', '2220.40', '10', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01004', '13-aug-2008', 'cu01004', 's001', 'yes', '20-aug-2008', '2220.40', '15', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01005', '14-aug-2008', 'cu01002', 's002', 'no', '30-aug-2008', '2220.40', '52', '28-march-2008');
+INSERT INTO Sales_Order_Table VALUES ('son01006', '15-aug-2008', 'cu01001', 's001', 'yes', '31-aug-2008', '2220.40', '43', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01007', '16-aug-2008', 'cu01003', 's004', 'yes', '28-aug-2008', '2220.40', '54', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01008', '16-jan-2008', 'cu01004', 's003', 'yes', '02-aug-2008', '2390.00', '34', 'null');
+INSERT INTO Sales_Order_Table VALUES ('son01009', '01-feb-2008', 'cu01004', 's003', 'no', '28-aug-2008', '8220.40', '54', '18-march-2008');
+Table 4 complete.
+
+5. CUSTOMER_TABLE1
+CREATE TABLE Customer_Table1 (Customer_name VARCHAR(30) NOT NULL, Customer_street VARCHAR(30) NOT NULL, Customer_city VARCHAR(30) NOT NULL);
+INSERT INTO Customer_Table1 VALUES ('Adams', 'Spring', 'Pittsfield');
+INSERT INTO Customer_Table1 VALUES ('Brooks', 'Senator', 'Brooklyn');
+INSERT INTO Customer_Table1 VALUES ('Curry', 'North', 'Rye');
+INSERT INTO Customer_Table1 VALUES ('Glenn', 'SandHill', 'Woodside');
+INSERT INTO Customer_Table1 VALUES ('Hayes', 'Main', 'Harrison');
+INSERT INTO Customer_Table1 VALUES ('Green', 'Walnut', 'Stamford');
+INSERT INTO Customer_Table1 VALUES ('Johnson', 'Alma', 'PaloAlto');
+INSERT INTO Customer_Table1 VALUES ('Jones', 'Main', 'Harrison');
+INSERT INTO Customer_Table1 VALUES ('Lindsay', 'Park', 'Pittsfield');
+INSERT INTO Customer_Table1 VALUES ('Smith', 'North', 'Rye');
+INSERT INTO Customer_Table1 VALUES ('Turner', 'Putnam', 'Stamford');
+Table 5 complete.
+
+6. LOAN_TABLE
+CREATE TABLE Loan_Table (Loan_number VARCHAR(30) NOT NULL, Branch_name VARCHAR(30) NOT NULL, Amount INT NOT NULL);
+INSERT INTO Loan_Table VALUES ('L-11', 'RoundHill', '900');
+INSERT INTO Loan_Table VALUES ('L-14', 'Downtown', '1500');
+INSERT INTO Loan_Table VALUES ('L-15', 'Perryridge', '1500');
+INSERT INTO Loan_Table VALUES ('L-16', 'Perryridge', '1300');
+INSERT INTO Loan_Table VALUES ('L-17', 'Downtown', '1000');
+INSERT INTO Loan_Table VALUES ('L-23', 'Redwood', '2000');
+INSERT INTO Loan_Table VALUES ('L-93', 'Mianus', '500');
+Table 6 complete.
+
+7. BORROWER_TABLE
+CREATE TABLE Borrower_Table (Customer_name VARCHAR(30) NOT NULL, Loan_number VARCHAR(30) NOT NULL);
+INSERT INTO Borrower_Table VALUES ('Adams', 'L-16');
+INSERT INTO Borrower_Table VALUES ('Curry', 'L-93');
+INSERT INTO Borrower_Table VALUES ('Hayes', 'L-15');
+INSERT INTO Borrower_Table VALUES ('Jackson', 'L-14');
+INSERT INTO Borrower_Table VALUES ('Jones', 'L-17');
+INSERT INTO Borrower_Table VALUES ('Smith', 'L-11');
+INSERT INTO Borrower_Table VALUES ('Smith', 'L-23');
+INSERT INTO Borrower_Table VALUES ('Williams', 'L-17');
+Table 7 complete.
+
+8. ACCOUNT_TABLE
+CREATE TABLE Account_Table (Account_number VARCHAR(30) NOT NULL, Branch_name VARCHAR(30) NOT NULL, Balance INT NOT NULL);
+INSERT INTO Account_Table VALUES ('A-101', 'Downtown', '500');
+INSERT INTO Account_Table VALUES ('A-215', 'Mianus', '700');
+INSERT INTO Account_Table VALUES ('A-102', 'Perryridge', '400');
+INSERT INTO Account_Table VALUES ('A-305', 'RoundHill', '350');
+INSERT INTO Account_Table VALUES ('A-201', 'Brighton', '900');
+INSERT INTO Account_Table VALUES ('A-222', 'Redwood', '700');
+INSERT INTO Account_Table VALUES ('A-217', 'Brighton', '750');
+Table 8 complete.
+
+9. DEPOSITOR_TABLE
+CREATE TABLE Depositor_Table (Customer_name VARCHAR(30) NOT NULL, Account_number VARCHAR(30) NOT NULL);
+INSERT INTO Depositor_Table VALUES ('Hayes', 'A-102');
+INSERT INTO Depositor_Table VALUES ('Johnson', 'A-101');
+INSERT INTO Depositor_Table VALUES ('Johnson', 'A-201');
+INSERT INTO Depositor_Table VALUES ('Jones', 'A-217');
+INSERT INTO Depositor_Table VALUES ('Lindsay', 'A-222');
+INSERT INTO Depositor_Table VALUES ('Smith', 'A-215');
+INSERT INTO Depositor_Table VALUES ('Turner', 'A-305');
+Table 9 complete.
+

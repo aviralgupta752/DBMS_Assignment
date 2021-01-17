@@ -9,7 +9,7 @@ database_name = "store"
 db = mysql.connect(
 	host = "localhost", 
 	user = "root", 
-	passwd = "Maninhell1#",
+	passwd = "your_password",
 	)
 cursor = db.cursor()
 try:
@@ -25,7 +25,7 @@ for i in range(len(document.tables)):
 	db = mysql.connect(
 		host = "localhost", 
 		user = "root", 
-		passwd = "Maninhell1#",
+		passwd = "your_password",
 		database = database_name
 		)
 	cursor = db.cursor()
@@ -56,7 +56,7 @@ for i in range(len(document.tables)):
 	db = mysql.connect(
 		host = "localhost", 
 		user = "root", 
-		passwd = "Maninhell1#",
+		passwd = "your_password",
 		database = database_name
 		)
 

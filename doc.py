@@ -61,7 +61,7 @@ for i in range(len(document.tables)):
 	db = mysql.connect(
 		host = "localhost", 
 		user = "root", 
-		passwd = "Maninhell1#",
+		passwd = "",
 		database = database_name
 		)
 

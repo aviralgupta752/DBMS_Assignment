@@ -10,7 +10,7 @@ database_name = "store1"
 db = mysql.connect(
 	host = "localhost", 
 	user = "root", 
-	passwd = "Maninhell1#",
+	passwd = "",
 	)
 cursor = db.cursor()
 try:
